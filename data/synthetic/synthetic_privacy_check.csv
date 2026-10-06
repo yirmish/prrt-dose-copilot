@@ -1,0 +1,7 @@
+target,n_real,n_synthetic,columns_compared,exact_row_matches,synthetic_doses_equal_to_a_real_dose_4dp,min_dist_syn_to_nearest_real,p05_dist_syn_to_nearest_real,median_dist_syn_to_nearest_real,median_dist_real_to_nearest_real
+tumor_burden,86,300,30,0,0,0.4944,0.6224,0.8113,0.6982
+kidneys,86,300,29,0,0,0.6058,0.7594,0.9176,0.6966
+liver_healthy,86,300,29,0,0,0.5254,0.652,0.8428,0.7156
+spleen,72,300,30,0,0,0.6252,0.7342,0.8938,0.6421
+bone_marrow,86,300,30,0,6,0.5727,0.6854,0.8585,0.7231
+tumors,309,761,30,0,4,0.5225,0.6988,0.9282,0.4078

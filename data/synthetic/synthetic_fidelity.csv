@@ -1,0 +1,7 @@
+target,baseline_terms,r2_log_real_insample,r2_log_synthetic_insample,median_dose_gy_real,median_dose_gy_synthetic,iqr_dose_gy_real,iqr_dose_gy_synthetic
+tumor_burden,pet_mean_suvbw+pet_volume_ml,0.472,0.506,36.48,36.909,40.918,42.88
+kidneys,pet_mean_bqml+pet_volume_ml,0.364,0.351,4.37,4.258,2.123,2.205
+liver_healthy,pet_mean_bqml+pet_volume_ml,0.093,0.122,2.56,2.383,2.578,3.089
+spleen,pet_mean_bqml+pet_volume_ml,0.235,0.215,5.395,5.347,4.357,4.782
+bone_marrow,pet_mean_bqml+pt_weight_kg,0.108,0.108,0.11,0.108,0.07,0.064
+tumors,pet_mean_suvbw+pet_volume_ml,0.391,0.413,36.21,35.615,38.07,37.154

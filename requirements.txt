@@ -1,0 +1,7 @@
+# Hosted demo / default install (TabPFN-3.5 through the Prior Labs API). Tested 2026-10-06, Python 3.11.
+streamlit==1.65.0
+tabpfn-client==0.6.1
+pandas==2.3.3
+numpy==2.4.6
+scikit-learn==1.9.0
+matplotlib==3.11.2

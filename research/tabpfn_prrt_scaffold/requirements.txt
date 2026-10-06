@@ -1,0 +1,12 @@
+# Pin everything the reported runs depend on. TabPFN's output depends on the
+# checkpoint, and checkpoints change between releases: "we used TabPFN" is not
+# a reproducible statement.
+tabpfn==8.5.0
+torch>=2.5
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+scipy>=1.11
+openpyxl>=3.1
+catboost>=1.2
+matplotlib>=3.8

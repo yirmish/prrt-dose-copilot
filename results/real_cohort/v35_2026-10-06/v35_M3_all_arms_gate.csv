@@ -1,0 +1,28 @@
+target,size,check,stored_tag,same_y_model,max_abs_diff,identical,note
+bone_marrow,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.2461452484130859,False,differs by design if the stored M0 used another baseline shape
+bone_marrow,M3,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_fixed,True,0.2461452484130859,False,differs by design if the stored M0 used another baseline shape
+bone_marrow,M3,y_model identical: CatBoost,phase12_catboost_fixed,True,,True,
+bone_marrow,M3,y_model identical: TabPFN-V2@8,phase12_catboost_fixed,True,,True,
+kidneys,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.5554994866251945,False,differs by design if the stored M0 used another baseline shape
+kidneys,M3,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_fixed,True,0.5554994866251945,False,differs by design if the stored M0 used another baseline shape
+kidneys,M3,"M0 median, stored vs today (first 5 repeats)",phase12_organ3p,True,0.0,True,differs by design if the stored M0 used another baseline shape
+kidneys,M3,y_model identical: CatBoost,phase12_catboost_fixed,True,,True,
+kidneys,M3,y_model identical: TabPFN-V2@8,phase12_catboost_fixed,True,,True,
+liver_healthy,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_corrected,True,0.554808497428894,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.8138418197631836,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M3,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_liver,True,0.554808497428894,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M3,"M0 median, stored vs today (first 5 repeats)",phase12_organ3p,True,0.0,True,differs by design if the stored M0 used another baseline shape
+liver_healthy,M3,y_model identical: CatBoost,phase12_catboost_liver,True,,True,
+liver_healthy,M3,y_model identical: TabPFN-V2@8,phase12_organ3p,True,,True,
+spleen,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_corrected,True,0.4624693393707275,False,differs by design if the stored M0 used another baseline shape
+spleen,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.3704708814620971,False,differs by design if the stored M0 used another baseline shape
+spleen,M3,"M0 median, stored vs today (first 5 repeats)",phase12_spleen_gy,False,2.219838380813598,False,differs by design if the stored M0 used another baseline shape
+spleen,M3,"M0 median, stored vs today (first 5 repeats)",phase12_spleen_topk,True,0.4624693393707275,False,differs by design if the stored M0 used another baseline shape
+spleen,M3,y_model identical: TabPFN-V2@8,phase12_spleen_gy,False,,False,
+spleen,M3,y_model identical: TopK3-TabPFN-V2@8,phase12_spleen_topk,True,,True,
+spleen,M3,y_model identical: TopK5-TabPFN-V2@8,phase12_spleen_topk,True,,True,
+tumor_burden,M3,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.0,True,differs by design if the stored M0 used another baseline shape
+tumor_burden,M3,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_fixed,True,0.0,True,differs by design if the stored M0 used another baseline shape
+tumor_burden,M3,"M0 median, stored vs today (first 5 repeats)",phase12_cb_cov_fast,True,0.0,True,differs by design if the stored M0 used another baseline shape
+tumor_burden,M3,y_model identical: CatBoost,phase12_catboost_fixed,True,,True,
+tumor_burden,M3,y_model identical: TabPFN-V2@8,phase12_catboost_fixed,True,,True,

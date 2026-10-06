@@ -1,0 +1,3 @@
+proper_scores_paired.py  units read 13  arms scored 45  comparator files rejected (shape / y_model / unreadable) 2
+rows out: coverage 45, paired deltas 64, brier 64, risk-coverage 320; flagged (decisive accuracy > 5 points below the cut-off, n>=10) 37
+No model fitted. 5 of 20 protocol repeats. Post-hoc, not pre-registered.

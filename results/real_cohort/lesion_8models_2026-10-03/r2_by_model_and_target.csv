@@ -1,0 +1,7 @@
+target,unit,TabPFN-3.5,TabPFN-2,CatBoost,XGBoost,HistGBM,LightGBM,RandomForest,ElasticNet
+tumors,lesion,0.451,0.392,0.357,0.321,0.249,0.298,0.343,0.272
+tumor_burden,treatment,0.449,0.470,0.435,0.430,0.284,0.402,0.474,0.382
+kidneys,treatment,0.220,0.173,0.099,0.018,0.049,0.039,0.137,0.139
+liver_healthy,treatment,0.303,0.225,0.260,0.234,0.138,0.213,0.256,0.174
+spleen,treatment,0.197,0.114,0.093,0.103,0.160,0.096,0.072,-0.015
+bone_marrow,treatment,0.222,0.235,0.188,0.164,0.181,0.195,0.218,0.244

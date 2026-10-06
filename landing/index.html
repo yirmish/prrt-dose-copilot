@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRRT Dose Copilot</title>
+<meta name="description" content="TabPFN-3.5 predictive distributions for 177Lu-DOTATATE absorbed dose that know when to measure.">
+<style>
+  :root { --ink:#16202c; --muted:#5b6673; --blue:#1f5fa8; --orange:#d9822b; --grey:#8a8f98; --bg:#ffffff; --panel:#f4f6f9; --line:#e2e6eb; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink:#e8edf3; --muted:#a3adb9; --bg:#0f141a; --panel:#18202a; --line:#2a3440; --blue:#6aa3e8; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height:1.1; margin:0 0 8px; letter-spacing:-0.02em; }
+  .tag { color: var(--blue); font-weight: 600; margin: 0 0 20px; }
+  p.lead { font-size: 18px; color: var(--ink); max-width: 720px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin: 24px 0 8px; }
+  .cta a { padding: 10px 18px; border-radius: 8px; text-decoration:none; font-weight:600; border:1px solid var(--blue); }
+  .cta a.primary { background: var(--blue); color: #fff; }
+  .cta a.secondary { color: var(--blue); }
+  .note { color: var(--muted); font-size: 14px; }
+  h2 { font-size: 22px; margin: 44px 0 12px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border:1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .card b { display:block; font-size: 28px; color: var(--blue); }
+  .card.warn b { color: var(--orange); }
+  table { width:100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align:left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight:600; }
+  .tbl { overflow-x:auto; }
+  ul { padding-left: 20px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; border-top:1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PRRT Dose Copilot</h1>
+  <p class="tag">A dose predictor that knows when to measure &middot; built on TabPFN-3.5</p>
+  <p class="lead">Before <sup>177</sup>Lu-DOTATATE therapy every patient has a <sup>68</sup>Ga-DOTATATE PET; the absorbed dose is
+  measured only <em>after</em> therapy. On our cohort the PET predicts that dose only partly &mdash; so the tool returns a
+  <strong>calibrated dose distribution</strong> and, at each clinical threshold, says <strong>decisive</strong> or <strong>measure</strong>.</p>
+  <div class="cta">
+    <a class="primary" href="https://github.com/yirmish/prrt-dose-copilot/blob/main/docs/demo.mp4">Watch the demo</a>
+    <a class="secondary" href="https://github.com/yirmish/prrt-dose-copilot">Code &amp; data (Apache-2.0)</a>
+  </div>
+  <p class="note">Research prototype &middot; not a medical device &middot; the app runs on a synthetic cohort; real-cohort results are aggregates.</p>
+
+  <h2>What we measured on the real cohort</h2>
+  <p class="note">One centre, cycle-1 treatments. 5&times;5 cross-validation grouped by patient, identical folds for every model,
+  TabPFN-3.5 offline, untuned, native quantiles. Comparators nested-tuned.</p>
+  <div class="grid">
+    <div class="card"><b>0.451 vs &le;&nbsp;0.357</b>lesion-dose R&sup2;, 140-feature table: TabPFN-3.5 vs six nested-tuned models (CatBoost, XGBoost, HistGB, LightGBM, RF, elastic net)</div>
+    <div class="card"><b>+0.082 [+0.013,&nbsp;+0.139]</b>vs tuned CatBoost; registered re-check at 32 estimators +0.079 [+0.011,&nbsp;+0.136] &mdash; robust. Discovery result: confirmation needs new patients.</div>
+    <div class="card"><b>0.80 / 0.94</b>coverage of TabPFN-3.5's native 80 / 95% lesion intervals &mdash; no calibration step (the tuned models needed split-conformal)</div>
+    <div class="card"><b>0.91&ndash;0.97</b>coverage of TabPFN-3.5's 95% intervals at treatment level, 17 PET features</div>
+    <div class="card warn"><b>0.36&ndash;0.63</b>the same for tuned CatBoost with quantile heads (4 targets) &mdash; confidently wrong</div>
+    <div class="card"><b>93&ndash;97% vs 77&ndash;87%</b>correct among "decisive" tumour-burden calls: TabPFN-3.5 (19&ndash;34% of patients called) vs tuned CatBoost (66&ndash;73% called)</div>
+  </div>
+
+  <p class="note">With only the lesion's 17 PET features TabPFN-3.5 is not more accurate than tuned CatBoost or a 2-term physical model;
+  the accuracy gain appears with the wide table. A 2-term physical model is also well calibrated; TabPFN-3.5's intervals are narrower.</p>
+
+  <h2>With a wide table (~165 features, 86 rows)</h2>
+  <div class="tbl"><table>
+    <tr><th>target</th><th>TabPFN-3.5 log R&sup2;</th><th>physical model</th><th>&Delta; [95% CI]</th><th>95% span</th></tr>
+    <tr><td>healthy liver</td><td>0.33</td><td>&minus;0.01</td><td><strong>+0.37 [0.16, 0.56]</strong></td><td>&times;8.3 vs &times;15.2</td></tr>
+    <tr><td>bone marrow</td><td>0.27</td><td>0.03</td><td><strong>+0.26 [0.07, 0.42]</strong></td><td>&times;6.6 vs &times;9.8</td></tr>
+    <tr><td>tumour burden</td><td>0.46</td><td>0.45</td><td>+0.04 [&minus;0.07, 0.15]</td><td>&times;12.4 vs &times;15.0</td></tr>
+    <tr><td>kidneys</td><td>0.19</td><td>0.33</td><td>&minus;0.13 [&minus;0.27, 0.05]</td><td>&times;3.8 vs &times;4.0</td></tr>
+  </table></div>
+  <p class="note">TabPFN-3.5 stays calibrated (95% coverage 0.90&ndash;0.95) and its intervals are narrower than the physical model's on 6 of 6 targets.</p>
+
+  <h2>Why published numbers look better</h2>
+  <p>Same model, same data: R&sup2; <strong>0.81</strong> when lesions of one patient sit on both sides of the split, <strong>0.41</strong> when the split is by patient.
+  The kidney control (about one row per patient) shows almost no gap (0.21 vs 0.15).</p>
+
+  <h2>What we do not claim</h2>
+  <ul>
+    <li>A confirmed accuracy advantage: the lesion-level result is a discovery plus a registered robustness check; confirmation is registered and needs about 100 new patients.</li>
+    <li>An accuracy win with PET features alone.</li>
+    <li>That predicted dose is precise enough to plan therapy &mdash; a 95% tumour interval spans about 10&times;.</li>
+    <li>That the app's lesion intervals are calibrated &mdash; with 17 PET features they are too narrow (95% covers 0.89).</li>
+  </ul>
+
+  <footer>PRRT Dose Copilot &middot; Prior Labs TabPFN-3.5 Hackathon entry &middot; code Apache-2.0 &middot; TabPFN-3.5 by Prior Labs.</footer>
+</div>
+</body>
+</html>

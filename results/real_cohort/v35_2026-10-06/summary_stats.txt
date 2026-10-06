@@ -1,0 +1,4 @@
+analyse_v35.py 2026-10-06 14:46
+units read (TabPFN-3.5 OOF files): 7
+summary rows out: 24
+comparator files rejected (y_model differs or M0 shape differs): 11 of 28

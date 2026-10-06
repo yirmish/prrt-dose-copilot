@@ -1,0 +1,19 @@
+run_tag v35_dist_20261006  arm TabPFN-V3_5@8  repeats 5 (protocol 20) -> is_protocol_run=False
+units requested 13  completed 13  flagged 0
+rows in == rows out for every unit: this script filters nothing; the scaffold's
+own row rules (data.assemble) are the only ones applied and are printed per unit.
+
+             unit  rows_in  rows_out  rows_rejected  features  n_groups  minutes  arm_rows                                          cohort
+  M1/tumor_burden       86        86              0        17        82      5.0         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+       M1/kidneys       86        86              0        17        82      4.8         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+ M1/liver_healthy       86        86              0        17        82      5.0         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+        M1/spleen       72        72              0        17        68      4.8         5  {'rows': 72, 'treatments': 72, 'patients': 68}
+   M1/bone_marrow       86        86              0        17        82      4.6         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+M1/tumors_hepatic      194       194              0        17        63      6.6         5 {'rows': 194, 'treatments': 67, 'patients': 63}
+        M1/tumors      309       309              0        18        82      9.1         5 {'rows': 309, 'treatments': 86, 'patients': 82}
+  M3/tumor_burden       86        86              0       165        82     11.2         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+       M3/kidneys       86        86              0       165        82      9.3         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+ M3/liver_healthy       86        86              0       165        82      8.6         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+        M3/spleen       72        72              0       164        68      7.9         5  {'rows': 72, 'treatments': 72, 'patients': 68}
+   M3/bone_marrow       86        86              0       165        82      8.9         5  {'rows': 86, 'treatments': 86, 'patients': 82}
+M3/tumors_hepatic      194       194              0       164        63     15.9         5 {'rows': 194, 'treatments': 67, 'patients': 63}

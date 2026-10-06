@@ -1,0 +1,94 @@
+{
+  "run_tag": "v35_dist_20261006",
+  "purpose": "TabPFN-3.5 predictive distribution through the scaffold",
+  "arm": "TabPFN-V3_5@8",
+  "n_repeats": 5,
+  "n_repeats_protocol": 20,
+  "is_protocol_run": false,
+  "n_folds": 5,
+  "cv_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "queue": [
+    [
+      "M1",
+      "tumor_burden"
+    ],
+    [
+      "M1",
+      "kidneys"
+    ],
+    [
+      "M1",
+      "liver_healthy"
+    ],
+    [
+      "M1",
+      "spleen"
+    ],
+    [
+      "M1",
+      "bone_marrow"
+    ],
+    [
+      "M1",
+      "tumors_hepatic"
+    ],
+    [
+      "M1",
+      "tumors"
+    ],
+    [
+      "M3",
+      "tumor_burden"
+    ],
+    [
+      "M3",
+      "kidneys"
+    ],
+    [
+      "M3",
+      "liver_healthy"
+    ],
+    [
+      "M3",
+      "spleen"
+    ],
+    [
+      "M3",
+      "bone_marrow"
+    ],
+    [
+      "M3",
+      "tumors_hepatic"
+    ]
+  ],
+  "baseline_kind_by_target": {
+    "tumor_burden": "plan",
+    "kidneys": "organ3p",
+    "liver_healthy": "organ3p",
+    "spleen": "organ3p",
+    "bone_marrow": "organ3p",
+    "tumors_hepatic": "plan",
+    "tumors": "plan"
+  },
+  "target": "log(Gy/GBq), scaffold default (normalise_by_activity=True, log=True)",
+  "tabpfn": "9.0.0",
+  "model_version": "V3_5",
+  "weights": "tabpfn-v3.5-20260909.safetensors",
+  "weights_sha256": "ece4d67eadfea42eb0e610df5189bea60cb7f31073d81e9c7a019b76eacf0be3",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.5.3",
+  "pandas": "3.0.6",
+  "sklearn": "1.9.1",
+  "python": "3.13.11",
+  "threads": "8",
+  "offline": true,
+  "token_visible": false,
+  "data_root": "Deidentified_Export_2026-09-07",
+  "started": "2026-10-06 14:03:51"
+}

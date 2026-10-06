@@ -1,0 +1,11 @@
+PRRT Dose Copilot
+Copyright 2026 Yirmi Shachor
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product uses TabPFN-3.5 by Prior Labs (https://priorlabs.ai), accessed either through the
+Prior Labs API (tabpfn-client) or the `tabpfn` Python package. The TabPFN-3.5 model weights are
+NOT included in this repository and are subject to Prior Labs' own licence terms
+(https://huggingface.co/Prior-Labs/tabpfn_3_5).
+
+The data in data/synthetic/ are synthetic. They contain no patient records.

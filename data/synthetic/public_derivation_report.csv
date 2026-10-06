@@ -1,0 +1,7 @@
+target,rows_in,rows_out,columns_out,kurtosis_rows_clamped_to_bound,weight_min_kg,weight_max_kg
+tumor_burden,300,300,28,25,40.0,120.0
+tumors,761,761,28,0,40.0,135.0
+kidneys,300,300,27,7,40.0,120.0
+liver_healthy,300,300,27,36,40.0,120.0
+spleen,300,300,27,1,40.0,120.0
+bone_marrow,300,300,28,6,40.0,115.0

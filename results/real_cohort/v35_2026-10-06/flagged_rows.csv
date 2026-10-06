@@ -1,0 +1,12 @@
+target,size,check,stored_tag,same_y_model,max_abs_diff,identical,note
+bone_marrow,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.24614524841308594,False,differs by design if the stored M0 used another baseline shape
+bone_marrow,M1,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_fixed,True,0.24614524841308594,False,differs by design if the stored M0 used another baseline shape
+kidneys,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.5554994866251945,False,differs by design if the stored M0 used another baseline shape
+kidneys,M1,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_fixed,True,0.5554994866251945,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_corrected,True,0.554808497428894,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.8138418197631836,False,differs by design if the stored M0 used another baseline shape
+liver_healthy,M1,"M0 median, stored vs today (first 5 repeats)",phase12_catboost_liver,True,0.554808497428894,False,differs by design if the stored M0 used another baseline shape
+spleen,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_corrected,True,0.46246933937072754,False,differs by design if the stored M0 used another baseline shape
+spleen,M1,"M0 median, stored vs today (first 5 repeats)",gate_m0_plan,True,0.37047088146209717,False,differs by design if the stored M0 used another baseline shape
+spleen,M1,"M0 median, stored vs today (first 5 repeats)",phase12_spleen_gy,False,2.2198383808135986,False,differs by design if the stored M0 used another baseline shape
+spleen,M1,"M0 median, stored vs today (first 5 repeats)",phase12_spleen_topk,True,0.46246933937072754,False,differs by design if the stored M0 used another baseline shape

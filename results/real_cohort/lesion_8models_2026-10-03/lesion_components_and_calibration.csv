@@ -1,0 +1,9 @@
+model,r2_overall,r2_between_patient,r2_within_patient,crps_log,cov80,cov95,width80_log,interval_method
+TabPFN-3.5,0.451,0.464,0.387,0.387,0.80,0.94,1.69,native quantiles (no calibration step)
+TabPFN-2,0.392,0.397,0.368,0.407,0.79,0.93,1.59,native quantiles (no calibration step)
+CatBoost,0.357,0.377,0.256,0.416,0.793,0.951,1.789,split-conformal on inner OOF residuals
+XGBoost,0.321,0.353,0.157,,,,,split-conformal on inner OOF residuals
+HistGBM,0.249,0.281,0.085,,,,,split-conformal on inner OOF residuals
+LightGBM,0.298,0.331,0.126,,,,,split-conformal on inner OOF residuals
+RandomForest,0.343,0.377,0.172,,,,,split-conformal on inner OOF residuals
+ElasticNet,0.272,0.313,0.059,,,,,split-conformal on inner OOF residuals

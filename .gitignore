@@ -1,0 +1,18 @@
+# secrets
+.env
+.streamlit/secrets.toml
+# never commit patient-level data or private tiers
+B_*/
+C_*/
+*.xlsx
+*.npz
+data/real/
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+# model weights
+*.safetensors
+*.ckpt

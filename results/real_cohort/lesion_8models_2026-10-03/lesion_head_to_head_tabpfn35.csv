@@ -1,0 +1,25 @@
+comparator,tuned,metric,delta,ci_lo,ci_hi,n_estimators
+TabPFN-2,no (native),R2,0.042,-0.034,0.151,8
+TabPFN-2,no (native),R2_within_patient,0.006,-0.066,0.091,8
+TabPFN-2,no (native),CRPS,-0.014,-0.042,0.014,8
+CatBoost,nested grid,R2,0.082,0.013,0.139,8
+CatBoost,nested grid,R2_within_patient,0.117,0.024,0.203,8
+CatBoost,nested grid,CRPS,-0.025,-0.048,-0.003,8
+XGBoost,nested grid,R2,0.104,0.050,0.170,8
+XGBoost,nested grid,R2_within_patient,0.194,0.104,0.318,8
+XGBoost,nested grid,CRPS,-0.033,-0.052,-0.013,8
+HistGBM,nested grid,R2,0.157,0.070,0.259,8
+HistGBM,nested grid,R2_within_patient,0.248,0.140,0.383,8
+HistGBM,nested grid,CRPS,-0.047,-0.077,-0.019,8
+LightGBM,nested grid,R2,0.130,0.066,0.206,8
+LightGBM,nested grid,R2_within_patient,0.225,0.132,0.344,8
+LightGBM,nested grid,CRPS,-0.041,-0.065,-0.019,8
+RandomForest,nested grid,R2,0.099,0.045,0.151,8
+RandomForest,nested grid,R2_within_patient,0.202,0.070,0.351,8
+RandomForest,nested grid,CRPS,-0.030,-0.051,-0.011,8
+ElasticNet,nested grid,R2,0.156,0.038,0.271,8
+ElasticNet,nested grid,R2_within_patient,0.322,-0.004,0.800,8
+ElasticNet,nested grid,CRPS,-0.045,-0.080,-0.010,8
+CatBoost,nested grid,R2,0.079,0.011,0.136,32
+CatBoost,nested grid,R2_within_patient,0.118,0.025,0.201,32
+CatBoost,nested grid,CRPS,-0.024,-0.046,-0.002,32

@@ -1,0 +1,15 @@
+[14:03:51] START arm=TabPFN-V3_5@8 repeats=5 threads=8 tabpfn=9.0.0 torch=2.14.0+cpu weights_sha_ok=True units=13
+[14:08:50] DONE M1/tumor_burden  n=86 p=17  5.0 min  log_r2 arm=+0.456 M0=+0.445  cov95=0.942 cov80=0.791 cov50=0.465
+[14:13:40] DONE M1/kidneys  n=86 p=17  4.8 min  log_r2 arm=+0.206 M0=+0.329  cov95=0.907 cov80=0.791 cov50=0.500
+[14:18:40] DONE M1/liver_healthy  n=86 p=17  5.0 min  log_r2 arm=+0.282 M0=-0.009  cov95=0.930 cov80=0.767 cov50=0.500
+[14:23:28] DONE M1/spleen  n=72 p=17  4.8 min  log_r2 arm=+0.066 M0=+0.120  cov95=0.931 cov80=0.722 cov50=0.375
+[14:28:02] DONE M1/bone_marrow  n=86 p=17  4.6 min  log_r2 arm=+0.043 M0=+0.033  cov95=0.965 cov80=0.767 cov50=0.442
+[14:34:38] DONE M1/tumors_hepatic  n=194 p=17  6.6 min  log_r2 arm=+0.214 M0=+0.308  cov95=0.861 cov80=0.655 cov50=0.407
+[14:43:45] DONE M1/tumors  n=309 p=18  9.1 min  log_r2 arm=+0.291 M0=+0.372  cov95=0.890 cov80=0.683 cov50=0.411
+[14:54:59] DONE M3/tumor_burden  n=86 p=165  11.2 min  log_r2 arm=+0.463 M0=+0.445  cov95=0.930 cov80=0.779 cov50=0.512
+[15:04:17] DONE M3/kidneys  n=86 p=165  9.3 min  log_r2 arm=+0.187 M0=+0.329  cov95=0.930 cov80=0.779 cov50=0.488
+[15:12:53] DONE M3/liver_healthy  n=86 p=165  8.6 min  log_r2 arm=+0.330 M0=-0.009  cov95=0.919 cov80=0.791 cov50=0.523
+[15:20:47] DONE M3/spleen  n=72 p=164  7.9 min  log_r2 arm=+0.258 M0=+0.120  cov95=0.917 cov80=0.750 cov50=0.472
+[15:29:39] DONE M3/bone_marrow  n=86 p=165  8.9 min  log_r2 arm=+0.270 M0=+0.033  cov95=0.953 cov80=0.756 cov50=0.465
+[15:45:31] DONE M3/tumors_hepatic  n=194 p=164  15.9 min  log_r2 arm=+0.341 M0=+0.308  cov95=0.902 cov80=0.768 cov50=0.454
+[15:45:31] QUEUE_DONE
