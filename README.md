@@ -14,6 +14,9 @@ threshold, and a call: **decisive** or **measure**.
 
 > Research prototype built for the Prior Labs TabPFN-3.5 Hackathon. **Not a medical device. Not for clinical use.**
 > The app runs on a **synthetic** cohort. Results on the real cohort are published as aggregates only.
+>
+> Figures in this README come from the analysis runs of 3–6 October 2026. The thesis manuscript and earlier
+> conference abstracts use other cohort snapshots and analysis settings, so their numbers are not directly comparable.
 
 [![The Predict tab: a dose distribution with ten scenarios, P(dose > threshold) and the call](docs/demo.gif)](docs/demo.mp4)
 
